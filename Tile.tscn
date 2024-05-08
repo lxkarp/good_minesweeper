@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dqh01e2ksbcvu"]
+[gd_scene load_steps=2 format=3 uid="uid://dqh01e2ksbcvu"]
+
+[ext_resource type="Script" path="res://Tile.gd" id="1_arefx"]
 
 [node name="Tile" type="Node2D"]
+script = ExtResource("1_arefx")

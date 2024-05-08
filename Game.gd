@@ -14,5 +14,6 @@ func _process(delta):
 
 func make_new_grid(size := 10):
 	grid = Grid.new()
-	grid.size = 10
+	grid.size = size
+	grid.populate_tiles()
 	return grid
