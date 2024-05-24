@@ -3,12 +3,13 @@ class_name Grid
 
 var TileScene = preload("res://Tile.tscn")
 
-var size  : int = 4
-var tiles : Array
+var size      : int = 4
+var tiles     : Array
+var grid_name : String = String.num(Time.get_unix_time_from_system( )).sha1_text()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print("Grid added!")
 
 func populate_tiles():
 	if size <= 0:

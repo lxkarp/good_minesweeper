@@ -1,6 +1,111 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqh01e2ksbcvu"]
+[gd_scene load_steps=25 format=3 uid="uid://dqh01e2ksbcvu"]
 
 [ext_resource type="Script" path="res://Tile.gd" id="1_arefx"]
+[ext_resource type="Texture2D" uid="uid://c8xw25150b06u" path="res://art/tiles/covered_0.png" id="2_8y1mk"]
+[ext_resource type="Texture2D" uid="uid://blejkbywyyqsa" path="res://art/tiles/clear_0.png" id="2_rkvfn"]
+[ext_resource type="Texture2D" uid="uid://d0gvmt7w0cnqc" path="res://art/tiles/covered_1.png" id="3_8wjht"]
+[ext_resource type="Texture2D" uid="uid://bsqxv844jdkpm" path="res://art/tiles/clear_1.png" id="3_k0qhi"]
+[ext_resource type="Texture2D" uid="uid://bopd3r7rcy8ui" path="res://art/tiles/clear_2.png" id="4_odlc1"]
+[ext_resource type="Texture2D" uid="uid://cw2efpavkhqf2" path="res://art/tiles/covered_2.png" id="4_vkc7f"]
+[ext_resource type="Texture2D" uid="uid://cwfix0dbjo48i" path="res://art/tiles/covered_3.png" id="5_5g6cc"]
+[ext_resource type="Texture2D" uid="uid://cuhfo5pisxci5" path="res://art/tiles/clear_3.png" id="5_cu3kw"]
+[ext_resource type="Texture2D" uid="uid://ppnujw0t2bfm" path="res://art/tiles/covered_4.png" id="6_cb202"]
+[ext_resource type="Texture2D" uid="uid://tmou8fjhjd76" path="res://art/tiles/clear_4.png" id="6_sirnj"]
+[ext_resource type="Texture2D" uid="uid://crfnyka3xtij8" path="res://art/tiles/covered_5.png" id="7_ah8m0"]
+[ext_resource type="Texture2D" uid="uid://oyoyitp8u7kw" path="res://art/tiles/clear_5.png" id="7_apx5l"]
+[ext_resource type="Texture2D" uid="uid://ddsf1wns65k2i" path="res://art/tiles/clear_6.png" id="8_aqysk"]
+[ext_resource type="Texture2D" uid="uid://ckkav4jujjdoq" path="res://art/tiles/covered_6.png" id="8_ii8ux"]
+[ext_resource type="Texture2D" uid="uid://b5253oxt6w2qa" path="res://art/tiles/clear_7.png" id="9_f6nnc"]
+[ext_resource type="Texture2D" uid="uid://cch1jbhj30bmj" path="res://art/tiles/covered_7.png" id="9_myfj7"]
+[ext_resource type="Texture2D" uid="uid://tjlrehcxrn2" path="res://art/tiles/clear_8.png" id="10_0usb8"]
+[ext_resource type="Texture2D" uid="uid://cmsygsd5dabwb" path="res://art/tiles/covered_8.png" id="10_bgmw6"]
+[ext_resource type="Texture2D" uid="uid://cls0ro6axo0pw" path="res://art/tiles/covered_9.png" id="11_4q3sc"]
+[ext_resource type="Texture2D" uid="uid://dsili51rtjg8h" path="res://art/tiles/clear_9.png" id="11_glr5f"]
+[ext_resource type="Texture2D" uid="uid://27s7qng1qg8y" path="res://art/tiles/covered_10.png" id="12_dsgxp"]
+[ext_resource type="Texture2D" uid="uid://cowf8vjclm1xf" path="res://art/tiles/clear_10.png" id="12_onis1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjstp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rkvfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k0qhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_odlc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cu3kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sirnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_apx5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_aqysk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f6nnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0usb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_glr5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_onis1")
+}],
+"loop": false,
+"name": &"clear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8y1mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8wjht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vkc7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5g6cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cb202")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ah8m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ii8ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_myfj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bgmw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4q3sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dsgxp")
+}],
+"loop": false,
+"name": &"hidden",
+"speed": 5.0
+}]
 
 [node name="Tile" type="Node2D"]
 script = ExtResource("1_arefx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xjstp")
+animation = &"hidden"
